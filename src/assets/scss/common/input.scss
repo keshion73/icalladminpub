@@ -70,6 +70,11 @@ input[type="number"]::-webkit-inner-spin-button {
       }
     }
   }
+  &.v-input--is-disabled{
+    fieldset{
+      background: #F8FAFC;
+    }
+  }
 }
 
 .v-input .error--text .v-messages__message,
@@ -145,7 +150,7 @@ input[type=checkbox] {
   }
 
   &:checked {
-    background-color: #399FC7;
+    background-color: #2F79E8;
     border: none
   }
 }
@@ -162,17 +167,27 @@ input[type=checkbox] {
   font-size: 1.6rem !important;
   font-weight: 700;
 
-  &.primary {
-    background: #399FC7 !important;
-    color: #fff;
+  &.btnbg {
+    background: #2F79E8 !important;
+    color: #fff !important;
     text-align: center;
 
     &:hover {
-      background-color: #47B4DD !important;
-      border-color: #47B4DD !important;
+      background-color: #49A7CB !important;
+      border-color: #49A7CB !important;
     }
   }
+  &.btntxt {
+    background: #fff !important;
+    color: #2F79E8 !important;
+    border: 1px solid #2F79E8;
+    text-align: center;
 
+    &:hover {
+      background-color: #2F79E8 !important;
+      color: #fff !important;
+    }
+  }
   &:disabled.v-btn.v-btn--disabled.v-btn--has-bg {
     background-color: #49A7CB !important;
     color: #fff !important;
