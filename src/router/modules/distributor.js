@@ -18,10 +18,10 @@ export default [
             },
             {
                 path: '/distributor/codegrant',
-                name: '대리점 코드부여',
+                name: '대리점 코드 등록',
                 component: CodeGrant,
                 meta: {
-                    groupName: "대리점 코드부여",
+                    groupName: "총판/대리점",
                 },
             },
             {

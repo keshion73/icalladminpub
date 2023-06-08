@@ -1,18 +1,16 @@
 
 <template>
-  <div>Header
+  <div>
   </div>
 </template>
 <script>
 import AppBarAuth from "@/components/AppBarAuth";
 import AppBar from "@/components/AppBar.vue";
-import Drawer from "@/components/Drawer.vue";
 
 export default {
   components: {
     AppBarAuth,
-    AppBar,
-    Drawer
+    AppBar
   },
   mounted() {
   },
