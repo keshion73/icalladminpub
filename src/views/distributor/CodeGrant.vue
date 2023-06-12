@@ -487,7 +487,7 @@
 import PageTit from "@/components/PageTit.vue";
   import Modal from "@/components/Modal.vue";
   export default {
-    components: {
+  components: {
       PageTit,
       Modal
     },
@@ -694,5 +694,9 @@ import PageTit from "@/components/PageTit.vue";
         max-width: 65% !important;
       }
     }
+    .page-bg {
+    background: #fff !important;
+    padding: 20px 0;
+  }
   }
 </style>

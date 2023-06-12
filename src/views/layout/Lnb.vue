@@ -113,11 +113,11 @@
           title: '개통',
           item: [{
               title: '개통 정보',
-              to: '/',
+              to: '/opening/search',
             },
             {
               title: '개통 현황',
-              to: '/'
+              to: '/opening/search'
             }
           ]
         },
@@ -125,15 +125,15 @@
           title: '정책/요금',
           item: [{
               title: '정책관리',
-              to: '/',
+              to: '/policy/policy',
             },
             {
               title: '요금제관리',
-              to: '/'
+              to: '/policy/rateplan'
             },
             {
               title: '환불관리',
-              to: '/'
+              to: '/policy/refund'
             }
           ]
         },
@@ -153,7 +153,7 @@
           title: '총판/대리점',
           item: [{
               title: '대리점 관리',
-              to: '/',
+              to: '/distributor/agency',
             },
             {
               title: '대리점 코드 등록',
@@ -161,7 +161,7 @@
             },
             {
               title: '대리점 유심칩 관리',
-              to: '/'
+              to: '/distributor/usim'
             }
           ]
         },
@@ -181,15 +181,15 @@
           title: '금액/예치금',
           item: [{
               title: '입출금 내역관리',
-              to: '/',
+              to: '/amount/history',
             },
             {
               title: '예치금 관리',
-              to: '/'
+              to: '/amount/deposit'
             },
             {
               title: '예치금 환불요청 조회',
-              to: '/'
+              to: '/amount/refund'
             }
           ]
         },
@@ -197,11 +197,11 @@
           title: '충전',
           item: [{
               title: '충전내역 조회',
-              to: '/',
+              to: '/charge/chargehistory',
             },
             {
               title: '충전 통계',
-              to: '/'
+              to: '/charge/chargestatistics'
             }
           ]
         },

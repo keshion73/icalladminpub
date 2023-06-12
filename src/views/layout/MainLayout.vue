@@ -4,7 +4,7 @@
         <Lnb :drawer="drawer">
         </Lnb>
         <v-main>
-            <app-bar></app-bar>
+            <AppBar />
             <div class="page-wrap">
                 <router-view class="page-cont"></router-view>
             </div>
@@ -14,12 +14,14 @@
 </template>
     
 <script>
+import AppBar from '../../components/AppBar'
 import Header from './Header.vue';
 import Lnb from './Lnb.vue';
 import Footer from './Footer.vue';
 
 export default {
     components: {
+    AppBar,
         Header,
         Footer,
         Lnb

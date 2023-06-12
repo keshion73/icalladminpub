@@ -7,7 +7,7 @@ const vuetify = new Vuetify({
   theme: {
     themes: {
       light: {
-        primary: '#49A7CB',
+        primary: '#2F79E8',
       },
     },
   },
