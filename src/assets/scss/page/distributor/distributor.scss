@@ -85,20 +85,16 @@
       }
     }
   }
-  .code-btn{
-      text-align: center;
-      display: flex;
-      justify-content: space-between;
-      max-width: 300px;
-      margin: 40px auto 0;
+  .mo-tit-btn{
+      max-width: 300px !important;
+      margin: 40px auto 0 !important;
       .v-btn{
-            min-width: auto;
-    width: calc(40% - 12px);
+    width: calc(40% - 12px) !important;
         + .v-btn{
-          margin-left: 12px;
+          margin-left: 12px !important;
         }
         &.btnbg{
-          width: 60%;
+          width: 60% !important;
         }
       }
     }

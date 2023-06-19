@@ -10,8 +10,7 @@
                 코드명
               </div>
               <div class="td">
-                <v-text-field outlined
-                  :rules="[rules.inputUserId.required, rules.inputUserId.length, rules.inputUserId.charValid]">
+                <v-text-field outlined>
                 </v-text-field>
               </div>
             </div>
@@ -76,13 +75,6 @@
       return {
         selected: '전체',
         items: ['전체','선택1', '선택2', '선택3'],
-        rules: {
-          inputUserId: {
-            required: value => !!value || 'ID를 입력하세요.',
-            length: value => !(value && value.length > 20) || 'ID는 20자 이상 입력할 수 없습니다.',
-            charValid: value => /^[a-zA-Z0-9]*$/.test(value) || '영문 및 숫자만 입력 가능합니다.'
-          },
-        },
         page: 1,
         headers: [{
             text: '코드명',
@@ -189,6 +181,18 @@
   .v-data-table__wrapper{
     tbody .text-start:first-child{
       text-decoration: underline;
+    }
+  }
+}
+@include pc {
+.sch-table-wrap .v-data-table{
+  height: calc(100vh - 400px);
+}
+}
+@include mobile {
+  .sch-table-wrap{
+    .mobile-table {
+    min-height: 300px;
     }
   }
 }

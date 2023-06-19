@@ -1,5 +1,5 @@
 import History from '@/views/amount/History'
-import Deposit from '@/views/deposit/Deposit'
+import Deposit from '@/views/amount/Deposit'
 import Refund from '@/views/amount/Refund'
 
 export default [

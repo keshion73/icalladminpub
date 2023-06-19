@@ -458,7 +458,7 @@
           </div>
         </div>
       </div>
-      <div class="code-btn">
+      <div class="mo-tit-btn">
         <v-btn class="btntxt" x-large>가상계좌재발급</v-btn>
         <v-btn class="btnbg" x-large @click="Modal = true">등록</v-btn>
       </div>

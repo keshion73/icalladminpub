@@ -1,39 +1,65 @@
-<template> 
-<div>
-  <v-navigation-drawer app permanent fixed :expand-on-hover="false" color="#161718" v-if="!$vuetify.breakpoint.mobile">
-    <div class="mini-navi-top" v-if="mini">
-      <div class="drawer-toggler cursor-pointer" :class="{ active: togglerActive }" @click="minifyDrawer">
-        <img src="@/assets/images/common/icon-menux.svg" alt="">
+<template>
+  <div>
+    <v-navigation-drawer app permanent fixed :expand-on-hover="false" color="#161718"
+      v-if="!$vuetify.breakpoint.mobile">
+      <div class="mini-navi-top" v-if="mini">
+        <div class="drawer-toggler cursor-pointer" :class="{ active: togglerActive }" @click="minifyDrawer">
+          <img src="@/assets/images/common/icon-menux.svg" alt="">
+        </div>
+        <p class="logo"><img src="@/assets/images/icalllogo.svg" alt=""><span>관리자</span></p>
       </div>
-      <p class="logo"><img src="@/assets/images/icalllogo.svg" alt=""><span>관리자</span></p>
-    </div>
-    <div class="navi-top" v-if="!mini">
-      <p class="logo"><img src="@/assets/images/icalllogo.svg" alt=""><span>관리자</span></p>
-      <div class="drawer-toggler cursor-pointer" :class="{ active: togglerActive }" @click="minifyDrawer">
-        <img src="@/assets/images/common/icon-menux.svg" alt="">
+      <div class="navi-top" v-if="!mini">
+        <p class="logo"><img src="@/assets/images/icalllogo.svg" alt=""><span>관리자</span></p>
+        <div class="drawer-toggler cursor-pointer" :class="{ active: togglerActive }" @click="minifyDrawer">
+          <img src="@/assets/images/common/icon-menux.svg" alt="">
+        </div>
       </div>
-    </div>
-    <v-list v-if="!mini">
-      <v-list-group v-for="(item, i) in submenu" :key="i" :ripple="false" active-class="item-active">
-        <template v-slot:activator>
-          <v-list-item-content>
-            <v-list-item-title>
-              {{ item.title }}
-            </v-list-item-title>
-          </v-list-item-content>
-        </template>
+      <v-list v-if="!mini">
+        <v-list-group>
+         <template v-slot:activator>
+            <v-list-item-content>
+              <v-list-item-title>
+                Yesign(예자인)
+              </v-list-item-title>
+            </v-list-item-content>
+          </template>
 
-        <v-list-item v-for="(subItem, j) in item.item" :key="j" :to="subItem.to">
-          <v-list-item-content>
-            <v-list-item-title>
-              {{ subItem.title }}
-            </v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-      </v-list-group>
-    </v-list>
-  </v-navigation-drawer>
-  <div class="hd-wrap" v-if="$vuetify.breakpoint.xs">
+          <v-list-item to='/userinfo/userinfo'>
+            <v-list-item-content>
+              <v-list-item-title>
+                내정보
+              </v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+          <v-list-item to='/userinfo/passwordinfo'>
+            <v-list-item-content>
+              <v-list-item-title>
+                비밀번호 변경
+              </v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </v-list-group>
+
+        <v-list-group v-for="(item, i) in submenu" :key="i" :ripple="false" active-class="item-active">
+          <template v-slot:activator>
+            <v-list-item-content>
+              <v-list-item-title>
+                {{ item.title }}
+              </v-list-item-title>
+            </v-list-item-content>
+          </template>
+
+          <v-list-item v-for="(subItem, j) in item.item" :key="j" :to="subItem.to">
+            <v-list-item-content>
+              <v-list-item-title>
+                {{ subItem.title }}
+              </v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </v-list-group>
+      </v-list>
+    </v-navigation-drawer>
+    <div class="hd-wrap" v-if="$vuetify.breakpoint.xs">
       <div class="hd-cont">
         <div class="logo">
           <img src="@/assets/images/icalllogo.svg" alt=""><span>관리자</span>
@@ -45,40 +71,33 @@
         </div>
       </div>
     </div>
-  <v-navigation-drawer v-if="$vuetify.breakpoint.xs" absolute width="250px" height="100vh" hide-overlay right v-model="drawer" temporary>
-      <div class="mem-info"> 
+    <v-navigation-drawer v-if="$vuetify.breakpoint.xs" absolute width="250px" height="100vh" hide-overlay right
+      v-model="drawer" temporary>
+      <div class="mem-info">
       </div>
       <div class="sub-menu">
         <v-list>
-         <v-list-group
-        v-for="(item, i) in submenu"
-        :key="i"
-        :ripple="false"
-      >
-        <template v-slot:activator>
-          <v-list-item-content>
-            <v-list-item-title>
-              {{ item.title }}
-            </v-list-item-title>
-          </v-list-item-content>
-        </template>
+          <v-list-group v-for="(item, i) in submenu" :key="i" :ripple="false">
+            <template v-slot:activator>
+              <v-list-item-content>
+                <v-list-item-title>
+                  {{ item.title }}
+                </v-list-item-title>
+              </v-list-item-content>
+            </template>
 
-        <v-list-item
-          v-for="(subItem, j) in item.item"
-          :key="j"
-          :to="subItem.to"
-        >
-          <v-list-item-content>
-            <v-list-item-title>
-              {{ subItem.title }}
-            </v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-      </v-list-group>
-      </v-list>
+            <v-list-item v-for="(subItem, j) in item.item" :key="j" :to="subItem.to">
+              <v-list-item-content>
+                <v-list-item-title>
+                  {{ subItem.title }}
+                </v-list-item-title>
+              </v-list-item-content>
+            </v-list-item>
+          </v-list-group>
+        </v-list>
       </div>
     </v-navigation-drawer>
-  
+
   </div>
 </template>
 <script>
@@ -93,31 +112,23 @@
     data: () => ({
       mini: false,
       togglerActive: false,
-      thirdLevelSimple: [
-        "Third level menu",
-        "Just another link",
-        "One last link",
-      ],
       submenu: [{
-          title: 'Yesign(예자인)',
-          item: [{
-              title: '내정보',
-              to: '/',
-            },
-            {
-              title: '비밀번호 변경',
-              to: '/'
-            }
-          ]
-        }, {
           title: '개통',
           item: [{
-              title: '개통 정보',
+              title: '개통조회',
               to: '/opening/search',
             },
             {
-              title: '개통 현황',
-              to: '/opening/search'
+              title: '개통등록',
+              to: '/opening/reg'
+            },
+            {
+              title: '개통요청조회',
+              to: '/opening/reqsearch'
+            },
+            {
+              title: '대리점조회',
+              to: '/opening/agencysearch'
             }
           ]
         },
@@ -295,12 +306,12 @@
         this.mini = !this.mini;
         const body = document.getElementsByTagName("body")[0];
 
-      if (body.classList.contains("drawer-mini")) {
-        body.classList.remove("drawer-mini");
-      } else {
-        body.classList.add("drawer-mini");
-      }
-        
+        if (body.classList.contains("drawer-mini")) {
+          body.classList.remove("drawer-mini");
+        } else {
+          body.classList.add("drawer-mini");
+        }
+
       },
     },
   };

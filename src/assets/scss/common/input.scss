@@ -112,7 +112,19 @@ input[type="number"]::-webkit-inner-spin-button {
     }
   }
 }
-
+.input-date {
+      .v-input {
+        max-width: 140px;
+        font-weight: 500;
+      }
+      .v-input__slot {
+      background: url('~@/assets/images/common/input-date.svg') no-repeat center left 15px !important;
+      padding: 0 12px 0 50px !important;
+    }
+    .v-input__prepend-inner{
+      display: none !important;
+    }
+    }
 input[type=checkbox] {
   width: 20px;
   height: 20px;

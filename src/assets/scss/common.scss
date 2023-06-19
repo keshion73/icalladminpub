@@ -237,10 +237,11 @@ body {
   }
 
   .page-tit {
-    padding: 20px 40px;
+    padding: 12px 24px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 72px;
 
     .v-btn {
       min-width: 100px !important;
@@ -253,6 +254,7 @@ body {
       &.btnbg {
         font-weight: 700;
       }
+      img{margin-right: 4px;}
     }
   }
 
@@ -365,6 +367,7 @@ body {
 }
 .sch-table-wrap{
     margin-top: 16px;
+    position: relative;
 }
 @include pc{
   .page-bg.page-flex {
@@ -416,13 +419,6 @@ body {
     }
   }
 }
-  .sch-table-wrap{
-.v-data-table__wrapper th:first-child,
-  .v-data-table__wrapper td:first-child {
-    padding-left: 40px;
-
-  }
-  }
 }
 @include mobile {
   .hd-wrap {
@@ -633,10 +629,25 @@ body {
     justify-content: center !important;
     background: #fff;
     padding: 20px 40px 0 !important;
+    height: auto !important;
   }
 
   .page-bg {
     background: none !important;
+    .mo-tit-btn{
+      text-align: center;
+      display: flex;
+      justify-content: space-between;
+      margin: 40px 20px 0;
+      .v-btn{
+        height: 48px !important;
+            min-width: auto;
+    width: calc(50% - 5px);
+        + .v-btn{
+          margin-left: 10px;
+        }
+      }
+    }
   }
   .sch-wrap{
     padding: 20px 38px;
@@ -667,7 +678,7 @@ body {
   .sch-table-wrap{
     .mobile-table {
           overflow: auto;
-    min-height: 300px;
+    min-height: 70vh;
     table {
       width: 1280px !important;
       th,td{
