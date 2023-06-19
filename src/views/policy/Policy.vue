@@ -108,6 +108,7 @@
 </script>
 
 <style lang="scss" scoped>
+.page-bg{background:#fff}
   .sch-table-wrap {
     margin-top: 0;
   }

@@ -7,60 +7,98 @@
       </div>
     </PageTit>
     <div class="page-bg" v-if="!$vuetify.breakpoint.xs">
-      <div class="code-add">
+      <div class="code-add">        
         <div class="grid">
-          <div class="grid-col" style="flex-direction: column;">
-            <div class="d-flex">
-              <div class="th">
-                판매방식
-              </div>
-              <div class="td" style="padding:23px 20px">
-                <v-radio-group class="code-radio" row v-model="radio01">
-                  <v-radio label="대리점" value="대리점"></v-radio>
-                  <v-radio label="총판" value="총판"></v-radio>
-                </v-radio-group>
-              </div>
+          <div class="grid-col" style="display: grid;grid-template-rows: 95px 1fr;">
+          <div class="d-flex">
+            <div class="th">
+              판매방식
             </div>
-            <div class="d-flex">
-              <div class="th">
-                대리점명
-              </div>
-              <div class="td">
-                <v-text-field outlined></v-text-field>
-              </div>
-            </div>
-            <div class="d-flex">
-              <div class="th">
-                대표자명
-              </div>
-              <div class="td">
-                <v-text-field outlined></v-text-field>
-              </div>
-            </div>
-            <div class="d-flex">
-              <div class="th">
-                주민번호
-              </div>
-              <div class="td d-flex">
-                <v-text-field outlined></v-text-field>
-                <span class="unit">-</span>
-                <v-text-field outlined></v-text-field>
-              </div>
-            </div>
-            <div class="d-flex">
-              <div class="th">
-                사업자번호
-              </div>
-              <div class="td d-flex">
-                <v-text-field outlined></v-text-field>
-                <span class="unit">-</span>
-                <v-text-field outlined style="width:135px"></v-text-field>
-                <span class="unit">-</span>
-                <v-text-field outlined></v-text-field>
-              </div>
+            <div class="td" style="padding:23px 20px">
+              <v-radio-group class="code-radio" row v-model="radio01">
+                <v-radio label="대리점" value="대리점"></v-radio>
+                <v-radio label="총판" value="총판"></v-radio>
+              </v-radio-group>
             </div>
           </div>
-          <div class="grid-col">
+          <div class="d-flex input-area">
+            <div class="th">
+              지역
+            </div>
+            <div class="td">
+              <v-radio-group class="code-radio" row v-model="radio02">
+                <v-radio label="서울/경기" value="서울/경기"></v-radio>
+                <v-radio label="강원도" value="강원도"></v-radio>
+                <v-radio label="충청도" value="충청도"></v-radio>
+                <v-radio label="전라도" value="전라도"></v-radio>
+                <v-radio label="경상도" value="경상도"></v-radio>
+                <v-radio label="제주도" value="제주도"></v-radio>
+              </v-radio-group>
+            </div>
+          </div>
+        </div>
+        <div class="grid-col" style="display: grid;grid-template-rows: 95px 1fr;">
+          <div class="d-flex">
+            <div class="th">
+              대리점명
+            </div>
+            <div class="td">
+              <v-text-field outlined></v-text-field>
+            </div>
+          </div>
+          <div class="d-flex">
+            <div class="th">
+              대표자명
+            </div>
+            <div class="td">
+              <v-text-field outlined></v-text-field>
+            </div>
+          </div>
+        </div>  
+        <div class="grid-col" style="display: grid;grid-template-rows: 95px 1fr;">
+          <div class="d-flex">
+            <div class="th">
+              주민번호
+            </div>
+            <div class="td d-flex">
+              <v-text-field outlined></v-text-field>
+              <span class="unit">-</span>
+              <v-text-field outlined></v-text-field>
+            </div>
+          </div>
+          <div class="d-flex">
+            <div class="th">
+              사업자번호
+            </div>
+            <div class="td d-flex">
+              <v-text-field outlined></v-text-field>
+              <span class="unit">-</span>
+              <v-text-field outlined style="width:135px"></v-text-field>
+              <span class="unit">-</span>
+              <v-text-field outlined></v-text-field>
+            </div>
+          </div>
+        </div>        
+        </div>
+      </div>
+      <!-- <div class="grid-col" style="flex-direction: column;">
+            <div class="d-flex">
+             <div class="d-flex input-confile">
+              <div class="th">
+                계약서
+              </div>
+              <div class="td" style="padding:17px 20px">
+                <v-file-input outlined prepend-icon="파일" clear-icon="mdi-close" color="#fff"></v-file-input>
+                <v-file-input outlined prepend-icon="파일" clear-icon="mdi-close" color="#fff"></v-file-input>
+                <v-file-input outlined prepend-icon="파일" clear-icon="mdi-close" color="#fff"></v-file-input>
+                <v-file-input outlined prepend-icon="파일" clear-icon="mdi-close" color="#fff"></v-file-input>
+                <v-file-input outlined prepend-icon="파일" clear-icon="mdi-close" color="#fff"></v-file-input>
+              </div>
+            </div>     
+          </div> -->
+      <div class="code-add">
+        <div class="grid">
+          <div class="grid-col" style="display: grid;grid-template-rows: 95px 95px 1fr;">
             <div class="d-flex">
               <div class="th">
                 사업자등록증
@@ -85,6 +123,8 @@
                 <v-file-input outlined prepend-icon="파일" clear-icon="mdi-close" color="#fff"></v-file-input>
               </div>
             </div>
+          </div>
+          <div class="grid-col" style="display: grid;grid-template-rows: 95px 1fr;">
             <div class="d-flex">
               <div class="th">
                 사전승낙서
@@ -102,22 +142,7 @@
               </div>
             </div>
           </div>
-          <div class="grid-col">
-            <div class="d-flex input-area">
-              <div class="th">
-                지역
-              </div>
-              <div class="td">
-                <v-radio-group class="code-radio" row v-model="radio02">
-                  <v-radio label="서울/경기" value="서울/경기"></v-radio>
-                  <v-radio label="강원도" value="강원도"></v-radio>
-                  <v-radio label="충청도" value="충청도"></v-radio>
-                  <v-radio label="전라도" value="전라도"></v-radio>
-                  <v-radio label="경상도" value="경상도"></v-radio>
-                  <v-radio label="제주도" value="제주도"></v-radio>
-                </v-radio-group>
-              </div>
-            </div>
+          <div class="grid-col" style="display: grid;grid-template-rows: 1fr;">
             <div class="d-flex input-confile">
               <div class="th">
                 계약서
@@ -128,11 +153,13 @@
                 <v-file-input outlined prepend-icon="파일" clear-icon="mdi-close" color="#fff"></v-file-input>
                 <v-file-input outlined prepend-icon="파일" clear-icon="mdi-close" color="#fff"></v-file-input>
                 <v-file-input outlined prepend-icon="파일" clear-icon="mdi-close" color="#fff"></v-file-input>
+                <v-file-input outlined prepend-icon="파일" clear-icon="mdi-close" color="#fff"></v-file-input>
               </div>
             </div>
           </div>
         </div>
       </div>
+
       <div class="code-add">
         <div class="grid">
           <div class="d-flex">
@@ -200,7 +227,9 @@
               상위대리점명
             </div>
             <div class="td d-flex">
-              <v-text-field outlined></v-text-field>
+             <v-autocomplete outlined append-icon=""
+               :items="['12', '43', '25']"
+               ></v-autocomplete>
               <v-checkbox label="상위 없음" color="#2F79E8"></v-checkbox>
             </div>
           </div>
@@ -420,7 +449,9 @@
             상위대리점명
           </div>
           <div class="td d-flex">
-            <v-text-field outlined></v-text-field>
+            <v-autocomplete outlined append-icon=""
+               :items="['12', '43', '25']"
+               ></v-autocomplete>
             <v-checkbox label="상위 없음" color="#2F79E8"></v-checkbox>
           </div>
         </div>
@@ -484,10 +515,10 @@
   </div>
 </template>
 <script>
-import PageTit from "@/components/PageTit.vue";
+  import PageTit from "@/components/PageTit.vue";
   import Modal from "@/components/Modal.vue";
   export default {
-  components: {
+    components: {
       PageTit,
       Modal
     },
@@ -496,7 +527,7 @@ import PageTit from "@/components/PageTit.vue";
         radio01: '대리점',
         radio02: '서울/경기',
         items: ['영업 담당자1', '영업 담당자2', '영업 담당자3'],
-        Modal:false,
+        Modal: false,
       }
     },
   }
@@ -507,6 +538,7 @@ import PageTit from "@/components/PageTit.vue";
 
   .page-bg {
     padding: 40px 40px;
+    background: #fff;
 
     .code-add {
       +.code-add {
@@ -539,6 +571,17 @@ import PageTit from "@/components/PageTit.vue";
         .v-input--checkbox {
           margin-left: 20px;
         }
+      }
+    }
+
+    .grid {
+      .th {
+        align-items: baseline;
+        padding: 40px 24px 0;
+      }
+
+      .td.d-flex {
+        align-items: baseline;
       }
     }
   }
@@ -694,9 +737,10 @@ import PageTit from "@/components/PageTit.vue";
         max-width: 65% !important;
       }
     }
+
     .page-bg {
-    background: #fff !important;
-    padding: 20px 0;
-  }
+      background: #fff !important;
+      padding: 20px 0;
+    }
   }
 </style>
