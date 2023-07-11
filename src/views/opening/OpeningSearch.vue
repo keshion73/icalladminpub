@@ -28,7 +28,7 @@
                     <v-menu v-model="menu" :close-on-content-click="false" transition="scale-transition" offset-y>
                       <template v-slot:activator="{ on, attrs }">
                         <!-- YY-MM-DD형식 -->
-                        <v-text-field v-model="s_date" v-bind="attrs" outlined v-on="on" hide-details="auto"
+                        <v-text-field v-model="s_date" v-bind="attrs" outlined v-on="on"
                           prepend-inner-icon="fa-"></v-text-field>
                       </template>
                       <v-date-picker v-model="s_date" no-title @input="menu = false"></v-date-picker>
@@ -144,7 +144,7 @@
             text: '유심번호',
             value: 'num3',
             sortable: false,
-            width: '7%'
+            width: '9%'
           },
           {
             text: '충전여부',
@@ -165,7 +165,8 @@
           {
             text: '고객식별번호',
             value: 'num7',
-            width: '8%'
+            width: '8%',
+            sortable: false,
           },
           {
             text: '개통일',
@@ -283,5 +284,17 @@
         height: 600px;
       }
     }
+  }
+  @include mobile{
+      .read{
+        padding: 10px;
+        background: #fff;
+      }
+      .detail-wrap{
+        margin-top: 20px;
+        .page-tit{
+          justify-content: space-between !important;
+        }
+      }
   }
 </style>

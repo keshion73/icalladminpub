@@ -70,8 +70,9 @@ input[type="number"]::-webkit-inner-spin-button {
       }
     }
   }
-  &.v-input--is-disabled{
-    fieldset{
+
+  &.v-input--is-disabled {
+    fieldset {
       background: #F8FAFC;
     }
   }
@@ -86,53 +87,61 @@ input[type="number"]::-webkit-inner-spin-button {
   input {
     height: 100%;
   }
-   .v-select__slot{
-  height: 48px;
+
+  .v-select__slot {
+    height: 48px;
   }
-.v-input__append-inner{
-  margin-top: 14px !important;
-}
-  .v-input__icon {    
+
+  .v-input__append-inner {
+    margin-top: 14px !important;
+  }
+
+  .v-input__icon {
     transition: all 0.5s;
     border: solid 1px #ccc;
-    width:24px;
+    width: 24px;
     height: 24px;
     border-radius: 100%;
 
     i {
       background: url('~@/assets/images/common/input-select.svg') center center no-repeat;
-      width:8px;
+      width: 8px;
       height: 4px;
       background-size: cover;
-      &::before{
+
+      &::before {
         display: none;
       }
     }
   }
 
   &--is-menu-active {
-    .v-input__icon {
-    }
+    .v-input__icon {}
   }
 }
-.v-autocomplete{
-  .v-select__slot{
-  height: 48px;
+
+.v-autocomplete {
+  .v-select__slot {
+    height: 48px;
   }
 }
+
 .input-date {
-      .v-input {
-        max-width: 140px;
-        font-weight: 500;
-      }
-      .v-input__slot {
-      background: url('~@/assets/images/common/input-date.svg') no-repeat center left 15px !important;
-      padding: 0 12px 0 50px !important;
-    }
-    .v-input__prepend-inner{
-      display: none !important;
-    }
-    }
+  .v-input {
+    max-width: 140px;
+    font-weight: 500;
+  }
+
+  .v-input__slot {
+    background: url('~@/assets/images/common/input-date.svg') no-repeat center left 15px !important;
+    padding: 0 12px 0 50px !important;
+  }
+
+  .v-input__prepend-inner {
+    display: none !important;
+  }
+}
+
 input[type=checkbox] {
   width: 20px;
   height: 20px;
@@ -198,6 +207,7 @@ input[type=checkbox] {
       border-color: #49A7CB !important;
     }
   }
+
   &.btntxt {
     background: #fff !important;
     color: #2F79E8 !important;
@@ -209,6 +219,7 @@ input[type=checkbox] {
       color: #fff !important;
     }
   }
+
   &:disabled.v-btn.v-btn--disabled.v-btn--has-bg {
     background-color: #49A7CB !important;
     color: #fff !important;

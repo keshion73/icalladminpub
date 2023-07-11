@@ -1,12 +1,12 @@
 <template>
   <div>
     <PageTit>
-      <div>
+      <div v-if="!$vuetify.breakpoint.sm">
         <v-btn class="btntxt">가상계좌재발급</v-btn>
         <v-btn class="btnbg" @click="Modal = true">등록</v-btn>
       </div>
     </PageTit>
-    <div class="page-bg" v-if="!$vuetify.breakpoint.xs">
+    <div class="page-bg">
       <div class="code-add">        
         <div class="grid">
           <div class="grid-col" style="display: grid;grid-template-rows: 95px 1fr;">
@@ -270,230 +270,12 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="page-bg" v-if="$vuetify.breakpoint.xs">
-      <div class="code-add">
-        <div class="d-flex">
-          <div class="th">
-            판매방식
-          </div>
-          <div class="td" style="padding:23px 20px">
-            <v-radio-group class="code-radio" row v-model="radio01">
-              <v-radio label="대리점" value="대리점"></v-radio>
-              <v-radio label="총판" value="총판"></v-radio>
-            </v-radio-group>
-          </div>
-        </div>
-        <div class="d-flex input-area">
-          <div class="th">
-            지역
-          </div>
-          <div class="td">
-            <v-radio-group class="code-radio" row v-model="radio02">
-              <v-radio label="서울/경기" value="서울/경기"></v-radio>
-              <v-radio label="강원도" value="강원도"></v-radio>
-              <v-radio label="충청도" value="충청도"></v-radio>
-              <v-radio label="전라도" value="전라도"></v-radio>
-              <v-radio label="경상도" value="경상도"></v-radio>
-              <v-radio label="제주도" value="제주도"></v-radio>
-            </v-radio-group>
-          </div>
-        </div>
-        <div class="d-flex">
-          <div class="th">
-            대리점명
-          </div>
-          <div class="td">
-            <v-text-field outlined></v-text-field>
-          </div>
-        </div>
-        <div class="d-flex">
-          <div class="th">
-            대표자명
-          </div>
-          <div class="td">
-            <v-text-field outlined></v-text-field>
-          </div>
-        </div>
-        <div class="d-flex">
-          <div class="th">
-            주민번호
-          </div>
-          <div class="td d-flex">
-            <v-text-field outlined></v-text-field>
-            <span class="unit">-</span>
-            <v-text-field outlined></v-text-field>
-          </div>
-        </div>
-        <div class="d-flex">
-          <div class="th">
-            사업자번호
-          </div>
-          <div class="td d-flex">
-            <v-text-field outlined></v-text-field>
-            <span class="unit">-</span>
-            <v-text-field outlined style="width:135px"></v-text-field>
-            <span class="unit">-</span>
-            <v-text-field outlined></v-text-field>
-          </div>
-        </div>
-        <div class="d-flex input-confile">
-          <div class="th">
-            계약서
-          </div>
-          <div class="td" style="padding:17px 20px">
-            <v-file-input outlined prepend-icon="파일" clear-icon="mdi-close" color="#fff"></v-file-input>
-            <!-- 업로드시 추가파일 생성 -->
-            <!-- <v-file-input outlined prepend-icon="파일" clear-icon="mdi-close" color="#fff"></v-file-input>
-            <v-file-input outlined prepend-icon="파일" clear-icon="mdi-close" color="#fff"></v-file-input>
-            <v-file-input outlined prepend-icon="파일" clear-icon="mdi-close" color="#fff"></v-file-input>
-            <v-file-input outlined prepend-icon="파일" clear-icon="mdi-close" color="#fff"></v-file-input> -->
-          </div>
-        </div>
-        <div class="d-flex">
-          <div class="th">
-            사업자등록증
-          </div>
-          <div class="td">
-            <v-file-input outlined prepend-icon="파일" clear-icon="mdi-close" color="#fff"></v-file-input>
-          </div>
-        </div>
-        <div class="d-flex">
-          <div class="th">
-            신분증
-          </div>
-          <div class="td">
-            <v-file-input outlined prepend-icon="파일" clear-icon="mdi-close" color="#fff"></v-file-input>
-          </div>
-        </div>
-        <div class="d-flex">
-          <div class="th">
-            통장사본
-          </div>
-          <div class="td">
-            <v-file-input outlined prepend-icon="파일" clear-icon="mdi-close" color="#fff"></v-file-input>
-          </div>
-        </div>
-        <div class="d-flex">
-          <div class="th">
-            사전승낙서
-          </div>
-          <div class="td">
-            <v-file-input outlined prepend-icon="파일" clear-icon="mdi-close" color="#fff"></v-file-input>
-          </div>
-        </div>
-        <div class="d-flex">
-          <div class="th">
-            인감증명서
-          </div>
-          <div class="td">
-            <v-file-input outlined prepend-icon="파일" clear-icon="mdi-close" color="#fff"></v-file-input>
-          </div>
-        </div>
-        <div class="d-flex">
-          <div class="th">
-            이메일
-          </div>
-          <div class="td d-flex">
-            <v-text-field outlined style="width:168px"></v-text-field>
-            <span class="unit">@</span>
-            <v-text-field outlined></v-text-field>
-          </div>
-        </div>
-        <div class="d-flex">
-          <div class="th">
-            폰번호
-          </div>
-          <div class="td d-flex">
-            <v-text-field outlined style="width:135px"></v-text-field>
-            <span class="unit">-</span>
-            <v-text-field outlined></v-text-field>
-            <span class="unit">-</span>
-            <v-text-field outlined></v-text-field>
-          </div>
-        </div>
-        <div class="d-flex">
-          <div class="th">
-            일반전화
-          </div>
-          <div class="td d-flex">
-            <v-text-field outlined style="width:135px"></v-text-field>
-            <span class="unit">-</span>
-            <v-text-field outlined></v-text-field>
-            <span class="unit">-</span>
-            <v-text-field outlined></v-text-field>
-          </div>
-        </div>
-        <div class="d-flex">
-          <div class="th">
-            팩스
-          </div>
-          <div class="td d-flex">
-            <v-text-field outlined style="width:135px"></v-text-field>
-            <span class="unit">-</span>
-            <v-text-field outlined></v-text-field>
-            <span class="unit">-</span>
-            <v-text-field outlined></v-text-field>
-          </div>
-        </div>
-        <div class="d-flex">
-          <div class="th">
-            주소
-          </div>
-          <div class="td d-flex">
-            <v-text-field outlined></v-text-field>
-          </div>
-        </div>
-        <div class="d-flex input-chk">
-          <div class="th">
-            상위대리점명
-          </div>
-          <div class="td d-flex">
-            <v-autocomplete outlined append-icon=""
-               :items="['12', '43', '25']"
-               ></v-autocomplete>
-            <v-checkbox label="상위 없음" color="#2F79E8"></v-checkbox>
-          </div>
-        </div>
-        <div class="d-flex">
-          <div class="th">
-            영업 담당자
-          </div>
-          <div class="td d-flex">
-            <v-select :items="items" outlined :menu-props="{ offsetY: true }" placeholder="선택">
-            </v-select>
-          </div>
-        </div>
-        <div class="d-flex">
-          <div class="th">
-            이체은행
-          </div>
-          <div class="td d-flex">
-            <v-text-field outlined></v-text-field>
-          </div>
-        </div>
-        <div class="d-flex">
-          <div class="th">
-            예금주명
-          </div>
-          <div class="td d-flex">
-            <v-text-field outlined></v-text-field>
-          </div>
-        </div>
-        <div class="d-flex">
-          <div class="th">
-            계좌번호
-          </div>
-          <div class="td d-flex">
-            <v-text-field outlined></v-text-field>
-          </div>
-        </div>
-      </div>
-      <div class="mo-tit-btn">
-        <v-btn class="btntxt" x-large>가상계좌재발급</v-btn>
-        <v-btn class="btnbg" x-large @click="Modal = true">등록</v-btn>
+      <div v-if="this.$vuetify.breakpoint.width <= 600" class="mo-tit-btn">
+        <v-btn class="btntxt">가상계좌재발급</v-btn>
+        <v-btn class="btnbg" @click="Modal = true">등록</v-btn>
       </div>
     </div>
+    
     <!-- <Modal @close="Modal = false" v-if="Modal" :title="'대리점 코드부여'">
       <p slot="mes">대리점 코드를 부여하시겠습니까?<br>
         <span style="font-weight:500;color:#000;margin-top: 5px;display: block">대리점 명 : 1234<br>대리점 코드 : IC900098 </span> 
@@ -524,13 +306,16 @@
     },
     data() {
       return {
+        
         radio01: '대리점',
         radio02: '서울/경기',
         items: ['영업 담당자1', '영업 담당자2', '영업 담당자3'],
         Modal: false,
       }
-    },
+  },
+
   }
+  
 </script>
 
 <style lang="scss" scoped>
@@ -741,6 +526,25 @@
     .page-bg {
       background: #fff !important;
       padding: 20px 0;
+      .grid-col{
+        >.d-flex{
+          flex-direction: column;
+        }
+        + .grid-col{
+          margin-top:20px
+        }
+      }
+      .code-add{
+          .th{
+            padding: 0;
+          }
+          + .code-add{
+            margin-top:20px
+          }
+          .grid + .grid{
+           margin-top:20px
+          }
+      }
     }
   }
 </style>

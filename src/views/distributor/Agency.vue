@@ -56,19 +56,22 @@
       </div>
     <div class="sch-table-wrap">
       <div>
-        <v-data-table :headers="headers" :items="contents" :items-per-page="itemsPerPage" hide-default-footer :mobile-breakpoint="0"
+        <v-data-table :headers="headers" :items="contents" :items-per-page="100" hide-default-footer :mobile-breakpoint="0"
         :class="$vuetify.breakpoint.xs?'mobile-table':''">
         </v-data-table>
         <v-pagination v-model="page" :length="15" :total-visible="7" circle active-color="#2F79E8"></v-pagination>
       </div>
     </div>
     </div>
+    <!-- <ModalInput></ModalInput> -->
   </div>
 </template>
 <script>
-  import PageTit from "@/components/PageTit.vue";
+  import ModalInput from '../../components/ModalInput'
+import PageTit from "@/components/PageTit.vue";
   export default {
     components: {
+    ModalInput,
       PageTit
     },
     data() {
@@ -165,6 +168,214 @@
             add: '경기 안산시 단원구 다움화1길 41-1',
             open2: '영업',
           },
+          {
+            code: 'IC290003',
+            com: 'MOBILAND',
+            date: '2023-03-03  16:07:23',
+            open: '영업',
+            name: '예자인',
+            age: '대리점',
+          tel: '010-7754-8808',
+          tel2: '010-7754-8808',
+          area: '서울/경기',
+          add: '경기 안산시 단원구 다움화1길 41-1',
+            open2: '영업',
+          },
+          {
+            code: 'IC290003',
+            com: 'MOBILAND',
+            date: '2023-03-03  16:07:23',
+            open: '영업',
+            name: '예자인',
+            age: '대리점',
+          tel: '010-7754-8808',
+          tel2: '010-7754-8808',
+          area: '서울/경기',
+            add: '경기 안산시 단원구 다움화1길 41-1',
+            open2: '영업',
+          },
+          {
+            code: 'IC290003',
+            com: 'MOBILAND',
+            date: '2023-03-03  16:07:23',
+            open: '영업',
+            name: '예자인',
+            age: '대리점',
+          tel: '010-7754-8808',
+          tel2: '010-7754-8808',
+          area: '서울/경기',
+          add: '경기 안산시 단원구 다움화1길 41-1',
+            open2: '영업',
+          },
+          {
+            code: 'IC290003',
+            com: 'MOBILAND',
+            date: '2023-03-03  16:07:23',
+            open: '영업',
+            name: '예자인',
+            age: '대리점',
+          tel: '010-7754-8808',
+          tel2: '010-7754-8808',
+          area: '서울/경기',
+            add: '경기 안산시 단원구 다움화1길 41-1',
+            open2: '영업',
+          },
+          {
+            code: 'IC290003',
+            com: 'MOBILAND',
+            date: '2023-03-03  16:07:23',
+            open: '영업',
+            name: '예자인',
+            age: '대리점',
+          tel: '010-7754-8808',
+          tel2: '010-7754-8808',
+          area: '서울/경기',
+          add: '경기 안산시 단원구 다움화1길 41-1',
+            open2: '영업',
+          },
+          {
+            code: 'IC290003',
+            com: 'MOBILAND',
+            date: '2023-03-03  16:07:23',
+            open: '영업',
+            name: '예자인',
+            age: '대리점',
+          tel: '010-7754-8808',
+          tel2: '010-7754-8808',
+          area: '서울/경기',
+            add: '경기 안산시 단원구 다움화1길 41-1',
+            open2: '영업',
+          },
+          {
+            code: 'IC290003',
+            com: 'MOBILAND',
+            date: '2023-03-03  16:07:23',
+            open: '영업',
+            name: '예자인',
+            age: '대리점',
+          tel: '010-7754-8808',
+          tel2: '010-7754-8808',
+          area: '서울/경기',
+          add: '경기 안산시 단원구 다움화1길 41-1',
+            open2: '영업',
+          },
+          {
+            code: 'IC290003',
+            com: 'MOBILAND',
+            date: '2023-03-03  16:07:23',
+            open: '영업',
+            name: '예자인',
+            age: '대리점',
+          tel: '010-7754-8808',
+          tel2: '010-7754-8808',
+          area: '서울/경기',
+            add: '경기 안산시 단원구 다움화1길 41-1',
+            open2: '영업',
+          },
+          {
+            code: 'IC290003',
+            com: 'MOBILAND',
+            date: '2023-03-03  16:07:23',
+            open: '영업',
+            name: '예자인',
+            age: '대리점',
+          tel: '010-7754-8808',
+          tel2: '010-7754-8808',
+          area: '서울/경기',
+          add: '경기 안산시 단원구 다움화1길 41-1',
+            open2: '영업',
+          },
+          {
+            code: 'IC290003',
+            com: 'MOBILAND',
+            date: '2023-03-03  16:07:23',
+            open: '영업',
+            name: '예자인',
+            age: '대리점',
+          tel: '010-7754-8808',
+          tel2: '010-7754-8808',
+          area: '서울/경기',
+            add: '경기 안산시 단원구 다움화1길 41-1',
+            open2: '영업',
+          },
+          {
+            code: 'IC290003',
+            com: 'MOBILAND',
+            date: '2023-03-03  16:07:23',
+            open: '영업',
+            name: '예자인',
+            age: '대리점',
+          tel: '010-7754-8808',
+          tel2: '010-7754-8808',
+          area: '서울/경기',
+          add: '경기 안산시 단원구 다움화1길 41-1',
+            open2: '영업',
+          },
+          {
+            code: 'IC290003',
+            com: 'MOBILAND',
+            date: '2023-03-03  16:07:23',
+            open: '영업',
+            name: '예자인',
+            age: '대리점',
+          tel: '010-7754-8808',
+          tel2: '010-7754-8808',
+          area: '서울/경기',
+            add: '경기 안산시 단원구 다움화1길 41-1',
+            open2: '영업',
+          },
+          {
+            code: 'IC290003',
+            com: 'MOBILAND',
+            date: '2023-03-03  16:07:23',
+            open: '영업',
+            name: '예자인',
+            age: '대리점',
+          tel: '010-7754-8808',
+          tel2: '010-7754-8808',
+          area: '서울/경기',
+          add: '경기 안산시 단원구 다움화1길 41-1',
+            open2: '영업',
+          },
+          {
+            code: 'IC290003',
+            com: 'MOBILAND',
+            date: '2023-03-03  16:07:23',
+            open: '영업',
+            name: '예자인',
+            age: '대리점',
+          tel: '010-7754-8808',
+          tel2: '010-7754-8808',
+          area: '서울/경기',
+            add: '경기 안산시 단원구 다움화1길 41-1',
+            open2: '영업',
+          },
+          {
+            code: 'IC290003',
+            com: 'MOBILAND',
+            date: '2023-03-03  16:07:23',
+            open: '영업',
+            name: '예자인',
+            age: '대리점',
+          tel: '010-7754-8808',
+          tel2: '010-7754-8808',
+          area: '서울/경기',
+            add: '경기 안산시 단원구 다움화1길 41-1',
+            open2: '영업',
+          },
+          {
+            code: 'IC290003',
+            com: 'MOBILAND',
+            date: '2023-03-03  16:07:23',
+            open: '영업',
+            name: '예자인',
+            age: '대리점',
+          tel: '010-7754-8808',
+          tel2: '010-7754-8808',
+          area: '서울/경기',
+            add: '경기 안산시 단원구 다움화1길 41-1',
+            open2: '영업',
+          },
         ]
       }
   },
@@ -179,14 +390,25 @@
   @import '~@/assets/scss/page/distributor/distributor.scss';
   ::v-deep{
   .v-data-table__wrapper{
+    width:auto;
+    min-width: 1280px;
+    height: calc(100vh - 400px);
     tbody .text-start:first-child{
       text-decoration: underline;
     }
+    
+  table{
+    thead{
+      position: sticky;
+      top:0;
+    }
+  }
   }
 }
 @include pc {
 .sch-table-wrap .v-data-table{
-  height: calc(100vh - 400px);
+  max-width: 100%;
+    overflow: auto;
 }
 }
 @include mobile {

@@ -15,7 +15,7 @@
                     <v-menu v-model="menu" :close-on-content-click="false" transition="scale-transition" offset-y>
                       <template v-slot:activator="{ on, attrs }">
                         <!-- YY-MM-DD형식 -->
-                        <v-text-field v-model="s_date" v-bind="attrs" outlined v-on="on" hide-details="auto"
+                        <v-text-field v-model="s_date" v-bind="attrs" outlined v-on="on"
                           prepend-inner-icon="fa-"></v-text-field>
                       </template>
                       <v-date-picker v-model="s_date" no-title @input="menu = false"></v-date-picker>
@@ -25,7 +25,7 @@
                   <div>
                     <v-menu v-model="menu2" :close-on-content-click="false" transition="scale-transition" offset-y>
                       <template v-slot:activator="{ on, attrs }">
-                        <v-text-field v-model="e_date" v-bind="attrs" outlined v-on="on" hide-details="auto"
+                        <v-text-field v-model="e_date" v-bind="attrs" outlined v-on="on"
                           prepend-inner-icon="fa-" type="number"></v-text-field>
                       </template>
                       <v-date-picker v-model="e_date" no-title @input="menu2 = false"></v-date-picker>
@@ -234,6 +234,12 @@
         height: calc(100vh - 400px);
       }
     }
+  }
+   @include mobile{
+      .read{
+        padding: 10px;
+        background: #fff;
+      }
   }
 
 </style>

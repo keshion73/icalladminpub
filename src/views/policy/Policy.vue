@@ -108,30 +108,44 @@
 </script>
 
 <style lang="scss" scoped>
-.page-bg{background:#fff}
+  .page-bg {
+    background: #fff
+  }
+
   .sch-table-wrap {
     margin-top: 0;
   }
 
   ::v-deep {
-      .v-data-table {
-        tbody {
-          tr:hover {
-            background: none !important;
-          }
+    .v-data-table {
+      tbody {
+        tr:hover {
+          background: none !important;
+        }
 
-          td {
-            height: 64px !important;
-          }
+        td {
+          height: 64px !important;
+        }
 
-          .v-input {
-            background: #F8FAFC;
+        .v-input {
+          background: #F8FAFC;
 
-            input {
-              height: 48px;
-            }
+          input {
+            height: 48px;
           }
         }
       }
     }
+
+    @include pc {
+      .v-data-table__wrapper {
+        height: calc(100vh - 160px);
+      }
+    }
+    @include mobile {
+      .sch-table-wrap .mobile-table {
+        min-height: 73vh;
+      }
+    }
+  }
 </style>

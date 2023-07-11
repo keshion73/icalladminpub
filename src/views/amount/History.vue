@@ -182,5 +182,11 @@
       }
     }
   }
+   @include mobile{
+      .read{
+        padding: 10px;
+        background: #fff;
+      }
+  }
 
 </style>

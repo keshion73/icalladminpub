@@ -96,6 +96,9 @@
 
   ::v-deep {
     @include pc {
+      .v-data-table__wrapper{
+    height: calc(100vh - 160px);
+  }
       .v-data-table {
         tbody {
           tr:hover {
@@ -110,6 +113,11 @@
             }
           }
         }
+      }
+    }
+    @include mobile{
+        .sch-table-wrap .mobile-table {
+        min-height: 73vh;
       }
     }
   }
