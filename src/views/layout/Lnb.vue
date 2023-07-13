@@ -72,11 +72,40 @@
       </div>
     </div>
     <v-navigation-drawer v-if="$vuetify.breakpoint.xs" absolute width="250px" height="100vh" hide-overlay right
-      v-model="drawer" temporary>
-      <div class="mem-info">
-      </div>
+      v-model="drawer" temporary color="#161718">
       <div class="sub-menu">
         <v-list>
+          <v-list-group>
+         <template v-slot:activator>
+            <v-list-item-content>
+              <v-list-item-title>
+                Yesign(예자인)
+              </v-list-item-title>
+            </v-list-item-content>
+          </template>
+
+          <v-list-item to='/userinfo/userinfo'>
+            <v-list-item-content>
+              <v-list-item-title>
+                내정보
+              </v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+          <v-list-item to='/userinfo/passwordinfo'>
+            <v-list-item-content>
+              <v-list-item-title>
+                비밀번호 변경
+              </v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+          <v-list-item to='/'>
+            <v-list-item-content>
+              <v-list-item-title>
+                로그아웃
+              </v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </v-list-group>
           <v-list-group v-for="(item, i) in submenu" :key="i" :ripple="false">
             <template v-slot:activator>
               <v-list-item-content>

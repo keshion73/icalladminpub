@@ -230,3 +230,11 @@ input[type=checkbox] {
     height: 50px !important;
   }
 }
+.requ{
+  &::after{
+    display: inline-block;
+    content: '*';
+    color:#E61E79;
+    margin-left: 2px;
+  }
+}

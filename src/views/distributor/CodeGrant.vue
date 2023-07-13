@@ -11,7 +11,7 @@
         <div class="grid">
           <div class="grid-col" style="display: grid;grid-template-rows: 95px 1fr;">
           <div class="d-flex">
-            <div class="th">
+            <div class="th requ">
               판매방식
             </div>
             <div class="td" style="padding:23px 20px">
